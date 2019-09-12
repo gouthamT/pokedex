@@ -19,8 +19,7 @@ The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
 ### `npm run startToppings`
-start the app before running the toppings.
-Runs the topping ui with pokedox app.
+start the app before running the toppings & run toppings ui with pokedox app.
 
 ### `npm run build`
 
