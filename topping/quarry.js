@@ -1,4 +1,4 @@
-const modalSample = `end point sample url - <small>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/***.png</small>`
+const modalSample = `end point sample url - <q><small>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/***.png</small></q>`
 
 const preFormattedModal = JSON.stringify(
   { id: '1', name: 'bulbasaur', url: '…kemon/1/' },
@@ -32,10 +32,10 @@ function start() {
       .wait(1)
       .addStep('fill search string with chimchar')
       .fillInputByTagName('input', 0, 'chimchar', 100)
-      .wait(0.5)
+      .wait(1)
       .addStep('fill search string with <b>ninetales</b>')
       .fillInputByTagName('input', 0, 'ninetales', 100)
-      .wait(0.5)
+      .wait(1)
       .focusElementByTagName('button', 0)
       .createToolTipByTagName(
         'button',
@@ -53,10 +53,10 @@ function start() {
       .addStep('open tree modal')
       .popUpTreeModal(
         `what's Happening ?`,
-        `Sample end to end flow`,
+        `<br /><i>Sample end to end flow</i>`,
         treeDataSource
       )
-      .wait(2.5)
+      .wait(100)
       .flushModal()
       .finish()
       .play()
